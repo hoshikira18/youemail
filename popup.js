@@ -7,6 +7,7 @@ form.addEventListener("submit", (e) => {
   // const autoLogin = e.target.autoLogin.checked;
 
   const emails = emailsString.split(" ").map((email) => email.trim());
+  // remove duplicate items
   const setEmails = [...new Set(emails)];
 
   sendMessage({
