@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test</title>
+    <script src="./assets/styles/tailwindcss.js"></script>
+    <style>
+      body {
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex flex-col space-y-5 justify-center items-center px-10 py-3">
+      <h1 class="text-2xl font-bold">YouEmail</h1>
+      <form class="w-full space-y-2">
+        <label for="emails" class="text-sm font-semibold pb-2"
+          >List emails: </label
+        ><br />
+        <input
+          type="text"
+          id="emails"
+          name="emails"
+          placeholder="[List emails separated by spaces]"
+          class="block w-full rounded border-0 py-1.5 px-1.5 text-gray-900 shadow-sm ring-1 ring-inset placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 text-sm"
+        />
+        <button
+          type="submit"
+          class="w-full text-white bg-indigo-600 text-sm font-semibold text-center px-3 py-2 rounded"
+        >
+          Import
+        </button>
+      </form>
+    </div>
+    <div class="py-5 text-center text-base bg-white">
+      Developed by
+      <a class="font-medium text-indigo-600" href="https://khuyentv.tech"
+        >Hoshikira</a
+      >
+    </div>
+    <script src="./popup.js"></script>
+  </body>
+</html>

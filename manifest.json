@@ -1,10 +1,23 @@
 {
   "manifest_version": 3,
   "name": "YouEmails",
-  "description": "",
+  "description": "A small Chrome Extension help us import multiple emails at once when sharing private video.",
   "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["https://studio.youtube.com/*"],
+      "js": ["./content.js"]
+    }
+  ],
   "action": {
-    "default_popup": "hello.html",
-    "default_icon": "hello_extensions.png"
-  }
+    "default_popup": "popup.html",
+    "default_icon": "./assets/images/provision.png"
+  },
+  "icons": {
+    "16": "./assets/images/provision.png",
+    "32": "./assets/images/provision.png",
+    "48": "./assets/images/provision.png",
+    "128": "./assets/images/provision.png"
+  },
+  "permissions": ["tabs"]
 }
