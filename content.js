@@ -2,7 +2,9 @@ chrome.runtime.onMessage.addListener((message) => {
   const emails = message.emails;
 
   for (let i = 0; i < emails.length; i++) {
-    const input = document.querySelector("#outer").querySelector("#text-input");
+    const input = document
+      .querySelector("#chip-bar-container")
+      .querySelector("#text-input");
     input.value = emails[i];
 
     // Simulate pressing the "Enter" key
