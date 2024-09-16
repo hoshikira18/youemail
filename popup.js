@@ -4,17 +4,14 @@ const emailsInput = document.querySelector("#emails");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const emailsString = e.target.emails.value;
-  // const autoLogin = e.target.autoLogin.checked;
 
   const emails = emailsString.split(" ").map((email) => email.trim());
+  // remove duplicate items
   const setEmails = [...new Set(emails)];
 
   sendMessage({
     emails: setEmails,
   });
-
-  // exit
-  //   window.close();
 });
 
 function sendMessage(msg) {
