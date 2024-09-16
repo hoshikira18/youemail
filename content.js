@@ -2,7 +2,8 @@ chrome.runtime.onMessage.addListener((message) => {
   const emails = message.emails;
 
   for (let i = 0; i < emails.length; i++) {
-    document.querySelector("#text-input").value = emails[i];
+    const input = document.querySelector("#outer").querySelector("#text-input");
+    input.value = emails[i];
 
     // Simulate pressing the "Enter" key
     const enterEvent = new KeyboardEvent("keydown", {
@@ -13,6 +14,6 @@ chrome.runtime.onMessage.addListener((message) => {
       keyCode: 13, // Enter key code
     });
 
-    document.querySelector("#text-input").dispatchEvent(enterEvent);
+    input.dispatchEvent(enterEvent);
   }
 });
